@@ -11,7 +11,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * Created by e.Near on 2017
+ * Created by Vitor Oliveira on 2017
  */
 @Service
 public class TwilioLine {

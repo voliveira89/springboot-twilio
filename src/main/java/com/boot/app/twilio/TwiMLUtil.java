@@ -5,7 +5,7 @@ import com.twilio.twiml.TwiMLException;
 import com.twilio.twiml.VoiceResponse;
 
 /**
- * Created by e.Near on 2017
+ * Created by Vitor Oliveira on 2017
  */
 public class TwiMLUtil {
 
