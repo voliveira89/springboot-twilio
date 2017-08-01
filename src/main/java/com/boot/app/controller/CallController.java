@@ -1,6 +1,6 @@
 package com.boot.app.controller;
 
-import com.boot.app.twilio.TwilioLine;
+import com.boot.app.twilio.TwilioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,15 +14,15 @@ import java.net.URISyntaxException;
 @Controller
 public class CallController {
 
-    private final TwilioLine twilioLine;
+    private final TwilioService twilioService;
 
     @Autowired
-    public CallController(TwilioLine twilioLine) {
-        this.twilioLine = twilioLine;
+    public CallController(TwilioService twilioService) {
+        this.twilioService = twilioService;
     }
 
     @GetMapping(value = "call/{numberToCall}")
     public void call(@PathVariable String numberToCall) throws URISyntaxException {
-        twilioLine.call(numberToCall);
+        twilioService.call(numberToCall);
     }
 }

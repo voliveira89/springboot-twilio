@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
  * Created by Vitor Oliveira on 2017
  */
 @Service
-public class TwilioLine {
+public class TwilioService {
 
     @Value("${twilio.number}")
     private String twilioNumber;
@@ -25,7 +25,7 @@ public class TwilioLine {
     private final TwilioRestClient restClient;
 
     @Autowired
-    public TwilioLine(TwilioRestClient restClient) {
+    public TwilioService(TwilioRestClient restClient) {
         this.restClient = restClient;
     }
 
